@@ -6,7 +6,7 @@ int main(){
 
 int a = 10;
 float b = 3.5;
-float resultado = a + b; // 'a' é convertido implicitamente para float
+float resultado = a + b; // 'x' é convertido implicitamente para float
 
 printf("Conversão Implícita:\n");
 printf("Resultado: %.2f\n", resultado);
@@ -17,7 +17,7 @@ printf("--------------------------------\n");
 
 int x = 10;
 int y = 3;
-float quociente = (float) x / y; /* 'a' é explicitamente 
+float quociente = (float) x / y; /* 'x' é explicitamente 
 convertido para float */
 
 printf("Conversão Explícita:\n");
