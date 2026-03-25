@@ -31,7 +31,7 @@ return 0;
 
 
 // Inicializa o gerador de números aleatórios
-srand(time(NULL));
+srand(time(0));
 // CPU escolhe 0, 1 ou 2
 cpu = rand() % 3;
 
