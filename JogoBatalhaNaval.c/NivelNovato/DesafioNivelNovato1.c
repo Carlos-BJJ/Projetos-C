@@ -17,6 +17,16 @@ int tabuleiro[10][10] = {
 
 int navio1 [3] = {3, 3, 3}, navio2 [3] = {3, 3, 3};
 
-printf("%d", tabuleiro[10][10]);    
+int cont = 0, cont2 = 0;
+
+for (cont; cont <= 9; cont++){
+    printf("%d ", tabuleiro[cont][cont]);
+
+    for (cont2; cont2 <= 8; cont2++){
+        printf("%d ", tabuleiro[0][cont2]);
+}
+    
+printf("\n");
+}
 
 }
