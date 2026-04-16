@@ -18,6 +18,8 @@ int main() {
     }
  
 printf("\n================================================\n");
+    
+    //Matrizes com loops
 
     int matriz[3][3]; // Declaração de uma matriz 3x3 de inteiros
  
