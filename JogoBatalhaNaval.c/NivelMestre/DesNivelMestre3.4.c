@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+//Definindo as constantes das linhas do tabuleiro e das habilidades
 #define Linhas 10
 #define Colunas 10
 #define linhasHab 3
@@ -7,7 +8,7 @@
 
 int main(){
 
-//Tabuleiro iniciado 
+//Matrizes e variaveis importantes declaradas
 int tabuleiro[Linhas][Colunas] = {0};
 int habilidadeCruz[linhasHab][colunasHab];
 int habilidade1[linhasHab][colunasHab];
@@ -28,6 +29,7 @@ int LinhaD2 = 0, ColunaD2 = 6; //Navio diagonal
 
 
 //LOOPS PARA O POSICIONAMENTO DOS NAVIOS
+//LOOP PARA O NAVIO NA DIAGONAL
 for(int i = 0; i < 3; i++){
     tabuleiro[LinhaD1 + i][ColunaD1 + i] = NavioDiagonal1[i];
 } 
@@ -38,12 +40,14 @@ for(int i = 0; i < 3; i++){
 /* Eu somo a coluna e linha com i, pois eu quero que os valores estejam
 em diagonal */
 
+//LOOP PARA O NAVIO NA HORIZONTAL
 for(int i = 0; i < 3; i++){
     tabuleiro[linhaH][colunaH + i] = NavioHorizontal[i];
 } 
 /* Eu somo a coluna com i, pois eu quero que os valores estejam
 um do lado do outro*/
 
+//LOOP PARA O NAVIO NA VERTICAL
 for(int i = 0; i < 3; i++){
     tabuleiro[linhaV + i][colunaV] = NavioVertical[i];
 }
@@ -69,6 +73,8 @@ for(int i = 0; i < linhasHab; i++){
             habilidade1[i][j] = 0;
         }
 
+        //Se a soma da linha inicial com o indice da linha for maior que o número de linhas então irá passar da borda.
+        //Essa mesma regra serve pras colunas
         if((linhaInicialHab1 + i) < Linhas && (colunaInicialHab1 + i) < Colunas){
         tabuleiro[linhaInicialHab1 + i][colunaInicialHab1 + j] = habilidade1[i][j];
         } else{
